@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Final - Librería Online</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="navbar-brand">📚 Ohana Copiados</a>
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="navbar-menu" id="navbarMenu">
+                <li><a href="#descripcion">Descripción</a></li>
+                <li><a href="#tecnologias">Tecnologías</a></li>
+                <li><a href="#funcionalidades">Funcionalidades</a></li>
+                <li><a href="#desarrollo">Desarrollo</a></li>
+                <li><a href="#demo">Demo</a></li>
+                <li><a href="#conclusiones">Conclusiones</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <div class="header">
+        <h1>📚 Ohana Copiados</h1>
+        <p>Proyecto Final - Desarrollo Web</p>
+        <p style="font-size: 1em; margin-top: 10px; font-weight: 400;">Tu nombre | Fecha de presentación</p>
+    </div>
+
+    <!-- Sidebar de Tecnologías -->
+    <div class="tech-sidebar" id="techSidebar">
+        <button class="tech-sidebar-close" onclick="closeSidebar()">×</button>
+        <div id="sidebarContent"></div>
+    </div>
+
+    <div class="container">
+        <!-- Descripción -->
+        <div class="section" id="descripcion">
+            <h2>Descripción del Proyecto</h2>
+            <div class="feature-list">
+                <p style="font-size: 1.2em; text-align: center; margin-bottom: 20px; font-weight: 300;">
+                    Una plataforma web completa para la gestión y visualización de productos literarios, 
+                    organizada por categorías y rubros para facilitar la navegación y búsqueda de libros.
+                </p>
+            </div>
+        </div>
+
+        <!-- Tecnologías -->
+        <div class="section tech-container" id="tecnologias">
+            <h2>Tecnologías Utilizadas</h2>
+            <div style="text-align: center; margin-top: 30px;">
+                <div class="tech-badge" onclick="showTechInfo('html')">HTML5</div>
+                <div class="tech-badge" onclick="showTechInfo('css')">CSS3</div>
+                <div class="tech-badge" onclick="showTechInfo('js')">JavaScript</div>
+                <div class="tech-badge" onclick="showTechInfo('responsive')">Responsive Design</div>
+                <div class="tech-badge" onclick="showTechInfo('git')">Git/GitHub</div>
+            </div>
+        </div>
+
+        <!-- Funcionalidades -->
+        <div class="section" id="funcionalidades">
+            <h2>Funcionalidades - Productos</h2>
+            <div class="feature-list">
+                <p style="font-size: 1.15em; text-align: center; margin-bottom: 30px; font-weight: 300;">
+                    Nuestro sistema de productos está organizado de manera intuitiva para facilitar la navegación del usuario
+                </p>
+            </div>
+            <div class="grid">
+                <div class="category-card">
+                    <div class="category-icon">📚</div>
+                    <h4>Categorías</h4>
+                    <p style="font-weight: 300;">Ficción, No Ficción, Infantil, Académico, etc.</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">🏷️</div>
+                    <h4>Rubros</h4>
+                    <p style="font-weight: 300;">Bestsellers, Novedades, Ofertas, Clásicos, etc.</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">🔍</div>
+                    <h4>Navegación</h4>
+                    <p style="font-weight: 300;">Filtros y búsqueda avanzada por múltiples criterios</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Proceso -->
+        <div class="section" id="desarrollo">
+            <h2>Proceso de Desarrollo</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>1️⃣ Planificación</h3>
+                    <p style="font-weight: 300;">Análisis de requisitos, diseño de wireframes y definición de la estructura del sitio.</p>
+                </div>
+                <div class="card">
+                    <h3>2️⃣ Diseño</h3>
+                    <p style="font-weight: 300;">Creación de la identidad visual, paleta de colores y diseño de interfaces.</p>
+                </div>
+                <div class="card">
+                    <h3>3️⃣ Desarrollo</h3>
+                    <p style="font-weight: 300;">Implementación del código HTML, CSS y JavaScript para todas las funcionalidades.</p>
+                </div>
+                <div class="card">
+                    <h3>4️⃣ Testing</h3>
+                    <p style="font-weight: 300;">Pruebas de funcionalidad, compatibilidad y experiencia de usuario.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Demo Visual CON CARRUSEL -->
+        <div class="section" id="demo">
+            <h2>Demostración Visual</h2>
+            <div class="carousel-container">
+                <div class="carousel">
+                    <div class="carousel-slides" id="carouselSlides">
+                        <!-- Slide 1 -->
+                        <div class="carousel-slide">
+                            <div class="placeholder">
+                                <div class="placeholder-icon">🖼️</div>
+                                <p>Página Principal</p>
+                                <p style="font-size: 0.9em; margin-top: 10px;">Captura de pantalla 1</p>
+                            </div>
+                        </div>
+                        <!-- Slide 2 -->
+                        <div class="carousel-slide">
+                            <div class="placeholder">
+                                <div class="placeholder-icon">📚</div>
+                                <p>Catálogo de Productos</p>
+                                <p style="font-size: 0.9em; margin-top: 10px;">Captura de pantalla 2</p>
+                            </div>
+                        </div>
+                        <!-- Slide 3 -->
+                        <div class="carousel-slide">
+                            <div class="placeholder">
+                                <div class="placeholder-icon">🛒</div>
+                                <p>Carrito de Compras</p>
+                                <p style="font-size: 0.9em; margin-top: 10px;">Captura de pantalla 3</p>
+                            </div>
+                        </div>
+                        <!-- Slide 4 -->
+                        <div class="carousel-slide">
+                            <div class="placeholder">
+                                <div class="placeholder-icon">📱</div>
+                                <p>Versión Móvil</p>
+                                <p style="font-size: 0.9em; margin-top: 10px;">Captura de pantalla 4</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="carousel-btn prev" onclick="moveSlide(-1)">❮</button>
+                    <button class="carousel-btn next" onclick="moveSlide(1)">❯</button>
+                </div>
+
+                <div class="carousel-indicators" id="indicators"></div>
+            </div>
+        </div>
+
+        <!-- Conclusiones -->
+        <div class="section demo-section" id="conclusiones">
+            <h2>Conclusiones</h2>
+            <div class="feature-list">
+                <p style="font-size: 1.1em; line-height: 1.8; font-weight: 300;">
+                    Este proyecto me permitió aplicar conocimientos de desarrollo web front-end, 
+                    trabajar con tecnologías modernas y crear una solución funcional para un caso 
+                    de uso real. Los principales desafíos incluyeron el diseño responsive y la 
+                    implementación de un sistema de categorías y rubros eficiente.
+                </p>
+            </div>
+            <a href="#" class="btn-demo">Ver Proyecto en Vivo</a>
+            <a href="#" class="btn-demo">Ver Código en GitHub</a>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2025 - Proyecto Final Ohana Copiados</p>
+        <p>Alumnas: Camila Estevez, Agustina Gallardo, Lourdes Melo y Candela Quevedo.</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
